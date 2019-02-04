@@ -1,4 +1,5 @@
 defmodule Shopify.ProductListing do
+  @derive [Poison.Encoder]
   @plural "product_listings"
   @singular "product_listing"
 
