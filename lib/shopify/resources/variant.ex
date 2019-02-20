@@ -35,6 +35,8 @@ defmodule Shopify.Variant do
     :option1,
     :option2,
     :option3,
+    # When Variants come through the product listing API, they come through as an :option_values key rather than :option1, :option2, :option3
+    :option_values,
     :position,
     :price,
     :product_id,
