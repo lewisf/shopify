@@ -41,6 +41,7 @@ defmodule Shopify.Checkout do
     :landing_site,
     :line_items,
     :note,
+    :phone,
     :referring_site,
     :shipping_address,
     :shipping_lines,
