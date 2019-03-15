@@ -44,7 +44,7 @@ defmodule Shopify.Checkout do
     :phone,
     :referring_site,
     :shipping_address,
-    :shipping_lines,
+    :shipping_line,
     :source_name,
     :subtotal_price,
     :tax_lines,
