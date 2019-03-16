@@ -78,7 +78,7 @@ defmodule Shopify.Checkout do
           tax_lines: [%TaxLine{}]
         }
       ],
-      shipping_lines: [%ShippingLine{}],
+      shipping_line: %ShippingLine{},
       tax_lines: [%TaxLine{}],
       discount_codes: [%DiscountCode{}],
       order: %Checkout.Order{}
