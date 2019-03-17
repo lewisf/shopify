@@ -34,9 +34,9 @@ defmodule Shopify.Payment do
   def find_payment_url(token, payment_id),
     do: "checkouts/#{token}/payments/#{payment_id}/payments.json"
 
-  def create(session, token) do
+  def create(session, token, body) do
     session
-    |> Request.new(create_url(token), empty_resource())
+    |> Request.new(create_url(token), body)
     |> Client.post()
   end
 
