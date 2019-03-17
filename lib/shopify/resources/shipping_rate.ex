@@ -6,8 +6,7 @@ defmodule Shopify.ShippingRate do
   use Shopify.Resource
 
   alias Shopify.{
-    ShippingRate,
-    Checkout
+    ShippingRate
   }
 
   defstruct [
@@ -23,7 +22,7 @@ defmodule Shopify.ShippingRate do
   @doc false
   def empty_resource do
     %ShippingRate{
-      checkout: %Checkout{}
+      checkout: %ShippingRate.Checkout{}
     }
   end
 
