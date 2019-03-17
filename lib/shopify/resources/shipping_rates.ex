@@ -3,13 +3,11 @@ defmodule Shopify.ShippingRate do
   @singular "shipping_rate"
   @plural "shipping_rates"
 
-  use Shopify.Resource,
-    import: [
-      :all
-    ]
+  use Shopify.Resource
 
   alias Shopify.{
-    ShippingRate
+    ShippingRate,
+    Checkout
   }
 
   defstruct [
@@ -42,7 +40,7 @@ defmodule Shopify.ShippingRate do
       iex> Shopify.session |> Shopify.ShippingRates.all("asdfasdfasdf")
       {:ok, %Shopify.Response{}}
   """
-  @spec shipping_rates(%Shopify.Session{}, binary) :: {:ok, %__MODULE__{}} | {:error, map}
+  @spec all(%Shopify.Session{}, binary) :: {:ok, %__MODULE__{}} | {:error, map}
   def all(session, token) do
     session
     |> Request.new(@plural <> "/#{token}/shipping_rates.json", empty_resource())
