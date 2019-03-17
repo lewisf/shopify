@@ -43,7 +43,7 @@ defmodule Shopify.ShippingRate do
   @spec all(%Shopify.Session{}, binary) :: {:ok, %__MODULE__{}} | {:error, map}
   def all(session, token) do
     session
-    |> Request.new(@plural <> "/#{token}/shipping_rates.json", empty_resource())
+    |> Request.new("checkouts/#{token}/shipping_rates.json", empty_resource())
     |> Client.get()
   end
 end
