@@ -36,7 +36,7 @@ defmodule Shopify.Payment do
 
   def create(session, token, body) do
     session
-    |> Request.new(create_url(token), body)
+    |> Request.new(create_url(token), body |> to_json)
     |> Client.post()
   end
 
