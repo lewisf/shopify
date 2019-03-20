@@ -36,7 +36,7 @@ defmodule Shopify.Payment do
 
   def create(session, token, body) do
     session
-    |> Request.new(create_url(token), Poison.encode!(%{payment: body}))
+    |> Request.new(create_url(token), %{}, singular_resource(), Poison.encode!(%{payment: body}))
     |> Client.post()
   end
 
